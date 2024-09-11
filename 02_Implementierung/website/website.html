@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Berlin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #007BFF; /* Blauer Hintergrund für die Navigation */
+        }
+        header .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 50%; /* Die Seitenleiste nimmt nun die Hälfte des Bildschirms ein */
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .sidebar p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+            flex-grow: 1;
+        }
+        .content h1 {
+            font-size: 28px;
+            font-weight: normal;
+        }
+        .image-container {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #007BFF; /* Blauer Hintergrund für die Fußzeile */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">International Berlin</div>
+        <nav>
+            <a href="#">about berlin</a>
+            <a href="#">studying</a>
+            <a href="#">bafög</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <img src="group.jpg" alt="Group of students">
+            <h2>International Students</h2>
+            <p>Studying in Berlin offers a unique opportunity to immerse yourself in one of the most culturally vibrant cities in Europe.</p>
+            <p>There are numerous resources available to help you settle in, including language courses and student support services.</p>
+            <p>Berlin's affordable cost of living, compared to other European cities, makes it an attractive destination for students. With reasonable rent prices, an extensive public transportation system, and discounts for students at various venues, Berlin offers a cost-effective yet dynamic environment.</p>
+        </div>
+
+        <div class="content">
+            <h1>Experiencing Berlin’s vibrant student life – where dynamic campuses, diverse cultures, and a thriving urban vibe create the perfect backdrop for your academic and personal growth.</h1>
+            <div class="image-container">
+                <img src="berlinskyline.png" alt="Berlin Skyline">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">Über uns</a>
+    </footer>
+
+    <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "b9507a8f-fdad-4d7a-87ca-3d0911c43327",
+        apiHost: "http://localhost:3000",
+        theme: {
+            button: {
+                backgroundColor: "#3B81F6",
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: "white",
+                customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+            },
+            chatWindow: {
+                showTitle: true,
+                title: 'Bot for international Students',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hello! I am LIA. How can I help you with your questions about studying in Berlin?',
+                errorMessage: 'Oh... Something went wrong. Please try again later.',
+                backgroundColor: "#ffffff",
+                height: 600,
+                width: 400,
+                fontSize: 12,
+                poweredByTextColor: "#303235",
+                botMessage: {
+                    backgroundColor: "#f7f8ff",
+                    textColor: "#303235",
+                    showAvatar: true,
+                    avatarSrc: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxnIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiM1OTNCMzkiIGQ9Ik0yNS41IDE0LjVjLS4yNDMgMC0uNzA4LjA3Ny0uNzA4LjA3N0w2LjA1NCAxNC41M3MtMS41MDQuNTEtMi4wMDggMS4wODlhNyA3IDAgMCAxLS4wMTctLjQ4OXYtNC4wN2E3LjA2IDcuMDYgMCAwIDEgNS45OTMtNi45OEEyLjE4NyAyLjE4NyAwIDAgMSAxMi4xOTkgMmg1LjgxYzUuNTIgMCAxMCA0LjQ4IDEwIDEwdjMuMTNxMCAuMjY2LS4wMi41M0EzLjI0IDMuMjQgMCAwIDAgMjUuNSAxNC41TTguNDM5IDIxLjIybC02IDQuMDNjLS41NS4zNy0uNTkgMS4xNy0uMDggMS42bDMuMTkgMi44MWMuNzIuNjQgMS44NS4zNCAyLjE4LS41NmwyLjMyLTYuNDl6bTE1LjE5IDBsNiA0LjAzYy41NS4zNy41OSAxLjE3LjA4IDEuNmwtMy4xOSAyLjgxYy0uNzIuNjQtMS44NS4zNC0yLjE4LS41NmwtMi4zMi02LjQ5eiIvPjxwYXRoIGZpbGw9IiNCQjgwNkUiIGQ9Ik05Ljc1IDE3Ljc1YTMuMjUgMy4yNSAwIDEgMS02LjUgMGEzLjI1IDMuMjUgMCAwIDEgNi41IDBtMTkgMGEzLjI1IDMuMjUgMCAxIDEtNi41IDBhMy4yNSAzLjI1IDAgMCAxIDYuNSAwIi8+PHBhdGggZmlsbD0iI0M2OEQ3QiIgZD0iTTE4LjgyOSAxM2E4LjgyIDguODIgMCAwIDEtOC4xLTUuMzM3YTEwLjI0IDEwLjI0IDAgMCAxLTMuNjIgNS40MTdhMy4yMyAzLjIzIDAgMCAwLTEuMDU1IDEuNDVxLS4xMDYuMDE1LS4yMS4wMzZsLjE5MiA1LjY0OUM2LjI3NSAyNi4wNzQgMTAuNjU5IDMwIDE2IDMwYzUuMzMgMCA5LjcyNS0zLjkyNiA5Ljk2NC05Ljc4NWwuMTkyLTUuNjQ5YTMuMyAzLjMgMCAwIDAtMS4zNjQuMDExQTQuODYgNC44NiAwIDAgMCAyMS4xOSAxM3oiLz48cGF0aCBmaWxsPSIjOTkwODM5IiBkPSJNMTYuMDE0IDIzLjM3M2E2LjUgNi41IDAgMCAxLTMuMDE2LS43MzNhLjMyOS4zMjkgMCAwIDAtLjQzLjQ3MmE0LjA4OCA0LjA4OCAwIDAgMCA2Ljg5IDBjLjE4LS4yODEtLjEzLS42MjItLjQyOS0uNDcyYTYuMzUgNi4zNSAwIDAgMS0zLjAxNS43MzMiLz48cGF0aCBmaWxsPSIjQUI2QTU1IiBkPSJNMTYuMDAzIDIyYy42NyAwIDEuMjctLjM0NSAxLjYyLS44NzNjLjMyLS40NzctLjAyLTEuMTI3LS41OS0xLjEyN2gtMi4wN2MtLjU3IDAtLjkxLjY1LS41OSAxLjEyN2MuMzYuNTI4Ljk2Ljg3MyAxLjYzLjg3MyIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik04LjIxOSAxOC40N2EzLjA5IDMuMDkgMCAwIDEgMy0yLjM0YzEuNSAwIDIuNzYgMS4wNyAzLjA1IDIuNDljLjA2LjMxLS4xOS42LS41MS42aC00Ljk0Yy0uNCAwLS43LS4zNy0uNi0uNzVtMTUuNiAwYTMuMDkgMy4wOSAwIDAgMC0zLTIuMzRjLTEuNSAwLTIuNzUgMS4wNy0zLjA1IDIuNDljLS4wNi4zMS4xOS42LjUxLjZoNC45NGMuNCAwIC43LS4zNy42LS43NSIvPjxwYXRoIGZpbGw9IiM3RDQ1MzMiIGQ9Ik05LjY5OSAxOC43YzAtMS4wOS44OS0xLjk4IDEuOTgtMS45OHMxLjk4Ljg5IDEuOTcgMS45OGMwIC4xOC0uMDIuMzUtLjA3LjUyaC0zLjgxYy0uMDQtLjE2LS4wNy0uMzQtLjA3LS41Mm0xMi42NSAwYzAtMS4wOS0uODktMS45OC0xLjk4LTEuOThjLTEuMSAwLTEuOTguODktMS45NyAxLjk4YzAgLjE4LjAyLjM1LjA3LjUyaDMuODFjLjA0LS4xNi4wNy0uMzQuMDctLjUyIi8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTExLjY3OSAxNy41N2MuNjIgMCAxLjEzLjUxIDEuMTMgMS4xM2MwIC4xOS0uMDUuMzctLjEzLjUyaC0yYy0uMDgtLjE1LS4xMy0uMzMtLjEzLS41MmMwLS42Mi41MS0xLjEzIDEuMTMtMS4xM204LjY5IDBjLS42MiAwLTEuMTMuNTEtMS4xMyAxLjEzYzAgLjE5LjA0LjM3LjEzLjUyaDJjLjA4LS4xNS4xMy0uMzMuMTMtLjUyYzAtLjYyLS41MS0xLjEzLTEuMTMtMS4xMyIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMS4zNDkgMTcuOTJhLjM1LjM1IDAgMSAxLS43IDBhLjM1LjM1IDAgMCAxIC43IDBtOC43NSAwYS4zNS4zNSAwIDEgMS0uNyAwYS4zNS4zNSAwIDAgMSAuNyAwIi8+PHBhdGggZmlsbD0iIzU5M0IzOSIgZD0iTTkuOTA2IDE1LjE3MWMuNTIyLS4xODUgMS4yNjgtLjMyNiAyLjI1Ni0uMjMzYS41LjUgMCAwIDAgLjA5NC0uOTk2Yy0xLjEzMy0uMTA3LTIuMDI2LjA1My0yLjY4NS4yODdhLjUuNSAwIDAgMCAuMzM1Ljk0Mm0xMi41Ni0uOTQyYy0uNjU4LS4yMzQtMS41NTItLjM5NC0yLjY4NC0uMjg3YS41LjUgMCAxIDAgLjA5NC45OTZjLjk4Ny0uMDkzIDEuNzM0LjA0NyAyLjI1NS4yMzNhLjUuNSAwIDEgMCAuMzM1LS45NDIiLz48L2c+PC9zdmc+",
+                },
+                userMessage: {
+                    backgroundColor: "#3B81F6",
+                    textColor: "#ffffff",
+                    showAvatar: true,
+                    avatarSrc: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMzMyLjY0IDY0LjU4QzMxMy4xOCA0My41NyAyODYgMzIgMjU2IDMyYy0zMC4xNiAwLTU3LjQzIDExLjUtNzYuOCAzMi4zOGMtMTkuNTggMjEuMTEtMjkuMTIgNDkuOC0yNi44OCA4MC43OEMxNTYuNzYgMjA2LjI4IDIwMy4yNyAyNTYgMjU2IDI1NnM5OS4xNi00OS43MSAxMDMuNjctMTEwLjgyYzIuMjctMzAuNy03LjMzLTU5LjMzLTI3LjAzLTgwLjZNNDMyIDQ4MEg4MGEzMSAzMSAwIDAgMS0yNC4yLTExLjEzYy02LjUtNy43Ny05LjEyLTE4LjM4LTcuMTgtMjkuMTFDNTcuMDYgMzkyLjk0IDgzLjQgMzUzLjYxIDEyNC44IDMyNmMzNi43OC0yNC41MSA4My4zNy0zOCAxMzEuMi0zOHM5NC40MiAxMy41IDEzMS4yIDM4YzQxLjQgMjcuNiA2Ny43NCA2Ni45MyA3Ni4xOCAxMTMuNzVjMS45NCAxMC43My0uNjggMjEuMzQtNy4xOCAyOS4xMUEzMSAzMSAwIDAgMSA0MzIgNDgwIi8+PC9zdmc+",
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 200,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than  characters.',
+                    autoFocus: true, 
+                },
+                feedback: {
+                    color: '#303235',
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com',
+                }
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
