@@ -58,7 +58,7 @@ Schritte zur Einbindung:
 3. Sobald die Datenquellen erfolgreich eingebunden und gespeichert wurden, müssen die Daten über den Button **"Upsert"** oben rechts in die Vektordatenbank eingebunden werden. Dann ist der Chatbot einsatzbereit. Dieser kann nun Antworten basierend auf den gescrapten Informationen generieren.
 
 Die eingebundenen Datenquellen werden in der Vektordatenbank gespeichert und müssen nur einmal hinzugefügt und geladen werden, um dauerhaft genutzt zu werden.
-Die für den Chatbot LIA verwendeten Links sind hier zu finden. 
+Die für den Chatbot LIA verwendeten Links sind [hier](https://github.com/thaodo2801/citylabchatbot/blob/main/02_Implementierung/datenquellen) zu finden. 
 
 # Usage
 Nach der erfolgreichen Installation und Einrichtung des Chatbots kannst du diesen über eine prototypische Website testen. Im GitHub-Repository befindet sich eine `index.html` Datei, die als eine einfache Benutzeroberfläche für den Chatbot dient.
