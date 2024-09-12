@@ -6,7 +6,7 @@
 #### Ein Projekt in Kooperation mit CityLab Berlin!      
 ![Logo_Citylab](./assets/Logo_Citylab.png)
 
-#  Chatbot für internationale Studenten in Berlin mit Flowise AI
+#  Chatbot für internationale Studenten in Berlin mit Flowise
 Der Chatbot LIA für international Studierende in Berlin ist ein intelligentes Assistenzsystem, das internationalen Studierenden in Berlin hilft, sich im deutschen Bildungssystem und im alltäglichen Leben zurechtzufinden. Dieser Chatbot, entwickelt mit Flowise AI, unterstützt Studierende bei wichtigen bürokratischen Prozessen, wie z.B. dem Umgang mit BAFöG, der Immatrikulation, Visaverlängerung und vielem mehr.
 
 ## Visuals
